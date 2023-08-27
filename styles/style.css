@@ -32,3 +32,17 @@
 .accordion-button.collapsed {
   background-color: rgb(227, 240, 255);
 }
+
+.certificate {
+  cursor: zoom-in;
+}
+
+.certificate-close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 100;
+  width: 0.5em;
+  height: 0.5em;
+  background-size: contain;
+}

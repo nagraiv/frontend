@@ -12,25 +12,50 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header class="header">
 
-  </header>
-  <main>
-    <section class="py-5 text-center container">
-      <div class="row py-lg-3">
-        <div class="col-lg-9 col-md-10 mx-auto">
-          <h1 class="py-2">Моё обучение в Нетологии</h1>
-          <p class="lead text-muted">Привет! Меня зовут Надежда. Я работаю в ИТ более 10 лет,
-            но первые шаги во <strong>Frontend‑разработке</strong> я сделала благодаря курсу:
-          </p>
+  <header data-bs-theme="dark">
+    <div class="text-bg-dark collapse" id="navbarHeader" style="">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4>Обо мне</h4>
+            <p class="text-body-secondary">
+              Привет! Меня зовут <strong>Надежда</strong>. Я работаю в ИТ более 10 лет. Мне нравится делать наш мир красивее и удобнее.
+              Особенно это касается интернет-сайтов. Посмотрите на мои первые шаги во Frontend‑разработке.
+            </p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4>Мои контакты</h4>
+            <ul class="list-unstyled">
+              <li><a href="mailto:nagraiv@yandex.ru" class="text-white">Email</a></li>
+              <li><a href="https://t.me/nagraiv" class="text-white">Телеграм</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="row py-lg-3">
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="img/icon-white.svg" alt="netology icon" width="20" height="20" class="me-3">
+          <strong>Моё обучение в Нетологии</strong>
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
         <div class="col-lg-9 col-md-10 mx-auto">
-            <h2 class="fw-light">JavaScript-программирование для начинающих</h2>
+          <h1 class="fw-light">JavaScript-программирование <br>
+          <span class="fs-3">для начинающих</span></h1>
           <p class="text-muted font-monospace">2022/11 - 2023/09</p>
-          <p class="lead fs-6 ">За 10 месяцев я прошла увлекательный путь от новичка до джуниора, впитала в себя необходимые знания и умения,
-            познакомилась с замечательными людьми, которые вдохновили меня развиваться как <em>Frontend‑разработчик</em> дальше.
+          <p class="lead text-body-secondary">За 10 месяцев я прошла увлекательный путь от новичка до джуниора, приобрела необходимые знания и умения,
+            познакомилась с замечательными наставниками, которые вдохновили меня на дальнейшее развитие во фронтенде.
             На этой странице собраны пет-проекты, завершающие каждую ступень обучения, а также выполненные домашние работы
             по основным темам.</p>
           <p>
@@ -141,7 +166,7 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
               HTML5
             </button>
           </h2>
@@ -424,8 +449,192 @@
             </button>
           </h2>
           <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionThemes">
-            <div class="accordion-body p-3">
-              веб-инспектор, эмуляция мобильных устройств.
+            <div class="accordion-body ">
+              <div class="px-3 py-2 border-bottom">
+                веб-инспектор: поиск и редактирование HTML-элементов и стилей
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary">
+                режим эмуляции мобильных устройств
+              </div>
+              <div class="px-3 py-2 border-bottom">
+                анализ сообщений и ошибок в консоли
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary">
+                отладка JS-кода
+              </div>
+              <div class="px-3 py-2 border-bottom">
+                отслеживание сетевых запросов и процесса загрузки страницы
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary">
+                мониторинг использования ресурсов
+              </div>
+              <div class="px-3 py-2">
+                инспектирование и управление хранилищами, кэшем и cookies
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              Базовый JavaScript
+            </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionThemes">
+            <div class="accordion-body">
+              <div class="px-3 py-2 border-bottom d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="q" target="_blank">2</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="a" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+              JavaScript в браузере
+            </button>
+          </h2>
+          <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionThemes">
+            <div class="accordion-body">
+              <div class="px-3 py-2 border-bottom d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="q" target="_blank">2</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="a" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 border-bottom bg-body-tertiary d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
+              <div class="px-3 py-2 d-flex flex-wrap justify-content-between">
+                <span></span>
+                <div>
+                  <a href="" target="_blank">1</a>
+                  <a href="" target="_blank">2</a>
+                  <a href="" target="_blank">3</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -437,10 +646,23 @@
     <section class="bg-body-tertiary py-5">
       <div class="container px-4 ">
         <h2 class="mb-5 pb-2 border-bottom">Моё свидетельство об обучении</h2>
+        <a href="#modalCertificate" class="d-block mx-auto col-lg-6 col-sm-9 certificate" data-bs-toggle="modal">
+          <img src="img/certificate.png" class="img-fluid img-thumbnail shadow" alt="my certificate small size">
+        </a>
       </div>
-      <div class="mx-auto" style="max-width:500px">
-        <img src="img/certificate.png" class="img-fluid img-thumbnail shadow" alt="my certificate">
+
+      <div class="modal fade" id="modalCertificate" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
+          <div class="modal-content">
+
+            <button type="button" class="btn-close certificate-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            <div class="modal-body">
+              <img src="img/certificate.png" class="img-fluid" alt="my certificate full size">
+            </div>
+          </div>
+        </div>
       </div>
+
     </section>
 
   </main>
