@@ -14,33 +14,42 @@
 <body>
 
   <header data-bs-theme="dark">
-    <div class="text-bg-dark collapse" id="navbarHeader" style="">
+    <div class="text-bg-dark collapse show" id="navbarHeader" style="">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-md-7 py-4">
+        <div class="row row-cols-md-2">
+          <div class="col-md-6 py-4">
             <h4>Обо мне</h4>
             <p class="text-body-secondary">
               Привет! Меня зовут <strong>Надежда</strong>. Я работаю в ИТ более 10 лет. Мне нравится делать наш мир красивее и удобнее.
               Особенно это касается интернет-сайтов. Посмотрите на мои первые шаги во Frontend‑разработке.
             </p>
           </div>
-          
-          <div class="col-sm-4 offset-md-1 py-4">
-            <h4>Мои контакты</h4>
-            <ul class="list-unstyled">
-              <li><a href="mailto:nagraiv@yandex.ru" class="text-white">Email</a></li>
-              <li><a href="https://t.me/nagraiv" class="text-white">Телеграм</a></li>
-            </ul>
+          <div class="col-md-5 offset-md-1 row row-cols-sm-2 header-info">
+            <div class=" py-4">
+              <h4>Мои достижения</h4>
+              <ul class="list-unstyled">
+                <li><a href="#projects" class="text-white"><span class="under">Проекты</span></a></li>
+                <li><a href="#themes" class="text-white"><span class="under">Компетенции</span></a></li>
+                <li><a href="#certificate" class="text-white"><span class="under">Сертификат</span></a></li>
+              </ul>
+            </div>
+            <div class=" py-4">
+              <h4>Мои контакты</h4>
+              <ul class="list-unstyled">
+                <li><a href="mailto:nagraiv@yandex.ru" class="text-white"><span class="under">Email</span></a></li>
+                <li><a href="https://t.me/nagraiv" class="text-white"><span class="under">Телеграм</span></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="navbar navbar-dark bg-dark shadow-sm">
       <div class="container">
-        <a href="#" class="navbar-brand d-flex align-items-center">
+        <div class="navbar-brand d-flex align-items-center">
           <img src="img/icon-white.svg" alt="netology icon" width="20" height="20" class="me-3">
           <strong>Моё обучение в Нетологии</strong>
-        </a>
+        </div>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,7 +59,7 @@
 
   <main>
     <section class="py-5 text-center container">
-      <div class="row py-lg-5">
+      <div class="row py-lg-4">
         <div class="col-lg-9 col-md-10 mx-auto">
           <h1 class="fw-light">JavaScript-программирование <br>
           <span class="fs-3">для начинающих</span></h1>
@@ -657,7 +666,7 @@
     </section>
     <div class="divider"></div>
 
-    <section class="bg-body-tertiary py-5">
+    <section class="bg-body-tertiary py-5" id="certificate">
       <div class="container px-4 ">
         <h2 class="mb-5 pb-2 border-bottom">Моё свидетельство об обучении</h2>
         <a href="#modalCertificate" class="d-block mx-auto col-lg-6 col-sm-9 certificate" data-bs-toggle="modal">
