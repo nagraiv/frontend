@@ -6,7 +6,6 @@
   <title>Портфолио</title>
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles/reset.css">
-<!--  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=PT+Sans&display=swap" rel="stylesheet">-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles/style.css">
@@ -20,8 +19,7 @@
           <div class="col-md-6 py-4">
             <h4>Обо мне</h4>
             <p class="text-body-secondary">
-              Привет! Меня зовут <strong>Надежда</strong>. Я работаю в ИТ более 10 лет. Мне нравится делать наш мир красивее и удобнее.
-              Особенно это касается интернет-сайтов. Посмотрите на мои первые шаги во Frontend‑разработке.
+              Привет! Меня зовут <strong>Надежда</strong>. Мне нравится делать красивые и удобные web-приложения. Я работаю в ИТ половину жизни, а последние <span id="experience"></span> посвятила Frontend-разработке. На этой странице вы можете ознакомиться с моими пет-проектами.
             </p>
           </div>
           <div class="col-md-5 offset-md-1 row row-cols-sm-2 header-info">
@@ -80,10 +78,52 @@
 
     <section class="bg-body-tertiary py-5" id="projects">
       <div class="container px-4 ">
-        <h2 class="mb-5 pb-2 border-bottom">Мои проекты</h2>
+        <div class="row d-flex align-items-center mb-5 pb-2 border-bottom">
+          <h2 class="col">Мои проекты</h2>
+          <div class="col btn-group" role="group">
+            <button class="btn btn-outline-primary btn-filter active" data-filter="all">Все</button>
+            <button class="btn btn-outline-primary btn-filter d-none" data-filter="job">Работа</button>
+            <button class="btn btn-outline-primary btn-filter" data-filter="study">Учёба</button>
+            <button class="btn btn-outline-primary btn-filter" data-filter="hobby">Хобби</button>
+          </div>
+        </div>
         <div class="row row-cols-1 row-cols-md-2 g-5 ">
 
-          <div class="col d-flex align-items-stretch">
+          <div class="col d-flex align-items-stretch" data-category="hobby">
+            <div class="card w-100 shadow">
+              <div class="card-body">
+                <h3 class="fs-4">Тестовое задание</h3>
+                <p class="card-text">Приложение на React + TypeScript + Vite для отображения аналитической таблицы показателей с графиками.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://nagraiv.github.io/react-api-kinopoisk/" class="btn btn-sm btn-primary">Публикация</a>
+                    <a href="https://github.com/nagraiv/react-api-kinopoisk" class="btn btn-sm btn-outline-secondary">Исходный код</a>
+                  </div>
+                  <small class="text-body-secondary">2025/11</small>
+                </div>
+              </div>
+              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/delta.png" alt="Тестовое задание">
+            </div>
+          </div>
+
+          <div class="col d-flex align-items-stretch" data-category="hobby">
+            <div class="card w-100 shadow">
+              <div class="card-body">
+                <h3 class="fs-4">Лучшие фильмы от Кинопоиска</h3>
+                <p class="card-text">React-приложение, которое получает данные по API, поддерживает сортировку, поиск и пагинацию.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://nagraiv.github.io/react-api-kinopoisk/" class="btn btn-sm btn-primary">К фильмам</a>
+                    <a href="https://github.com/nagraiv/react-api-kinopoisk" class="btn btn-sm btn-outline-secondary">Исходный код</a>
+                  </div>
+                  <small class="text-body-secondary">2024/01</small>
+                </div>
+              </div>
+              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/kinopoisk.png" alt="Лучшие фильмы от Кинопоиска">
+            </div>
+          </div>
+
+          <div class="col d-flex align-items-stretch" data-category="study">
             <div class="card w-100 shadow">
               <div class="card-body">
                 <h3 class="fs-4">Сайт бронирования билетов онлайн</h3>
@@ -96,11 +136,11 @@
                   <small class="text-body-secondary">2023/09</small>
                 </div>
               </div>
-              <img class="img-fluid bd-placeholder-img card-img-bottom" src="img/diploma_cinema.png" />
+              <img class="img-fluid bd-placeholder-img card-img-bottom" src="img/diploma_cinema.png" alt="Сайт бронирования билетов онлайн">
             </div>
           </div>
 
-          <div class="col d-flex align-items-stretch">
+          <div class="col d-flex align-items-stretch" data-category="study">
             <div class="card w-100 shadow">
               <div class="card-body">
                 <h3 class="fs-4">Приложение для управления финансами</h3>
@@ -112,11 +152,11 @@
                   <small class="text-body-secondary">2023/07</small>
                 </div>
               </div>
-              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/money_manager.png" />
+              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/money_manager.png" alt="Приложение для управления финансами">
             </div>
           </div>
 
-          <div class="col d-flex align-items-stretch">
+          <div class="col d-flex align-items-stretch" data-category="study">
             <div class="card w-100 shadow">
               <div class="card-body">
                 <h3 class="fs-4">Сайт-биржа для крипто-стартапа</h3>
@@ -128,45 +168,11 @@
                   <small class="text-body-secondary">2023/06</small>
                 </div>
               </div>
-              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/netcoin_market.png" />
+              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/netcoin_market.png" alt="Сайт-биржа для крипто-стартапа">
             </div>
           </div>
 
-          <div class="col d-flex align-items-stretch">
-            <div class="card w-100 shadow">
-              <div class="card-body">
-                <h3 class="fs-4">Игра крестики-нолики на бесконечной доске</h3>
-                <p class="card-text">Итоговая работа модуля "Основы программирования".</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <a href="https://nagraiv.github.io/pb-diplom/" class="btn btn-sm btn-primary">Сыграть</a>
-                    <a href="https://github.com/nagraiv/pb-diplom" class="btn btn-sm btn-outline-secondary">Исходный код</a>
-                  </div>
-                  <small class="text-body-secondary">2023/04</small>
-                </div>
-              </div>
-              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/tic-tac-toe.png" />
-            </div>
-          </div>
-
-          <div class="col d-flex align-items-stretch">
-            <div class="card w-100 shadow">
-              <div class="card-body">
-                <h3 class="fs-4">Лэндинг блога с продвинутыми элементами</h3>
-                <p class="card-text">Итоговая работа модуля "Адаптивная и мобильная вёрстка".</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <a href="https://nagraiv.github.io/mq-final/" class="btn btn-sm btn-primary">Смотреть сайт</a>
-                    <a href="https://github.com/nagraiv/mq-final" class="btn btn-sm btn-outline-secondary">Исходный код</a>
-                  </div>
-                  <small class="text-body-secondary">2023/03</small>
-                </div>
-              </div>
-              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/blog_landing.png" />
-            </div>
-          </div>
-
-          <div class="col d-flex align-items-stretch">
+          <div class="col d-flex align-items-stretch" data-category="hobby">
             <div class="card w-100 shadow">
               <div class="card-body">
                 <h3 class="fs-4">Лэндинг сайта юридической фирмы</h3>
@@ -179,9 +185,44 @@
                   <small class="text-body-secondary">2023/05</small>
                 </div>
               </div>
-              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/judico_landing.png" />
+              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/judico_landing.png" alt="Лэндинг сайта юридической фирмы">
             </div>
           </div>
+
+          <div class="col d-flex align-items-stretch" data-category="study">
+            <div class="card w-100 shadow">
+              <div class="card-body">
+                <h3 class="fs-4">Игра крестики-нолики на бесконечной доске</h3>
+                <p class="card-text">Итоговая работа модуля "Основы программирования".</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://nagraiv.github.io/pb-diplom/" class="btn btn-sm btn-primary">Сыграть</a>
+                    <a href="https://github.com/nagraiv/pb-diplom" class="btn btn-sm btn-outline-secondary">Исходный код</a>
+                  </div>
+                  <small class="text-body-secondary">2023/04</small>
+                </div>
+              </div>
+              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/tic-tac-toe.png" alt="Игра крестики-нолики на бесконечной доске">
+            </div>
+          </div>
+
+          <div class="col d-flex align-items-stretch" data-category="study">
+            <div class="card w-100 shadow">
+              <div class="card-body">
+                <h3 class="fs-4">Лэндинг блога с продвинутыми элементами</h3>
+                <p class="card-text">Итоговая работа модуля "Адаптивная и мобильная вёрстка".</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://nagraiv.github.io/mq-final/" class="btn btn-sm btn-primary">Смотреть сайт</a>
+                    <a href="https://github.com/nagraiv/mq-final" class="btn btn-sm btn-outline-secondary">Исходный код</a>
+                  </div>
+                  <small class="text-body-secondary">2023/03</small>
+                </div>
+              </div>
+              <img class="img-fluid h-300 bd-placeholder-img card-img-bottom" src="img/blog_landing.png" alt="Лэндинг блога с продвинутыми элементами">
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -776,13 +817,55 @@
   <footer class="bg-body-tertiary py-4 ">
     <address class="container py-3 d-flex flex-wrap justify-content-between align-items-center border-top">
       <div class="col-md-4">
-        <span class="mb-3 mb-md-0 text-body-secondary">© 2023</span>
+        <span class="mb-3 mb-md-0 text-body-secondary">© <span id="year"></span></span>
       </div>
       <ul class="nav col-md-4 d-flex justify-content-end list-unstyled">
-        <li class="ms-3"><a class="text-body-secondary" href="mailto:nagraiv@yandex.ru"><img class="bi" width="24" height="24" src="img/email.svg" alt="e-mail logo"/></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="https://t.me/nagraiv"><img class="bi" width="24" height="24" src="img/telegram.svg" alt="telegram logo"/></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="mailto:nagraiv@yandex.ru"><img class="bi" width="24" height="24" src="img/email.svg" alt="e-mail logo"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://t.me/nagraiv"><img class="bi" width="24" height="24" src="img/telegram.svg" alt="telegram logo"></a></li>
       </ul>
     </address>
   </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const startDate = new Date(2023, 9, 5); // месяц с 0 (0 = январь), поэтому октябрь = 9
+
+    function calculateExperience() {
+      const today = new Date();
+      let years = today.getFullYear() - startDate.getFullYear();
+      let months = today.getMonth() - startDate.getMonth();
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      return `${years} ${years === 1 ? 'год' : 'года'} ${months} ${months === 1 ? 'месяц' : 'месяцев'}`;
+    }
+
+    document.getElementById('experience').textContent = calculateExperience();
+  </script>
+  <script>
+    const buttons = document.querySelectorAll('.btn-filter');
+    const cards = document.querySelectorAll('[data-category]');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.classList.remove('d-none');
+          } else {
+            card.classList.add('d-none');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
